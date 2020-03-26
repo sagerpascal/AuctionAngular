@@ -6,15 +6,23 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./auction-list.component.css']
 })
 export class AuctionListComponent implements OnInit {
+
+  constructor() {
+  }
   @Input() headerTitle: string;
 
   @Output() titleClicked = new EventEmitter<string>();
 
+  auctions = [
+    {title: 'bike'},
+    {title: 'iPhone'},
+    {title: 'watch'},
+    {title: 'table'},
+    {title: 'boat'}
+  ];
+
   onTitleClicked(event: MouseEvent): void {
     this.titleClicked.emit('Title clicked');
-  }
-
-  constructor() {
   }
 
   ngOnInit(): void {
