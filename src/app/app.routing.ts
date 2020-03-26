@@ -1,3 +1,9 @@
 import {Routes, RouterModule} from '@angular/router';
-export const routes: Routes = [];
+import {AuctionListComponent} from './auction-list/auction-list.component';
+
+export const routes: Routes = [{
+  path: 'auctions',
+  component: AuctionListComponent
+}];
+
 export const routing = RouterModule.forRoot(routes);

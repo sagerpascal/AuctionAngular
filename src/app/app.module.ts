@@ -9,6 +9,13 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuctionDataService} from './shared/auction-data.service';
 import {AuctionListDetailComponent} from './auction-list-detail/auction-list-detail.component';
 import {AngularDateHttpInterceptor} from './shared/angular-date-http-interceptor.component';
+import {routing} from './app.routing';
+
+@NgModule({
+  imports: [
+    routing
+  ]
+})
 
 @NgModule({
   declarations: [
