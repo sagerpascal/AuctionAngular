@@ -10,12 +10,8 @@ import {AuctionDataService} from './shared/auction-data.service';
 import {AuctionListDetailComponent} from './auction-list-detail/auction-list-detail.component';
 import {AngularDateHttpInterceptor} from './shared/angular-date-http-interceptor.component';
 import {routing} from './app.routing';
+import {RouterModule} from '@angular/router';
 
-@NgModule({
-  imports: [
-    routing
-  ]
-})
 
 @NgModule({
   declarations: [
@@ -25,8 +21,10 @@ import {routing} from './app.routing';
     AuctionListDetailComponent
   ],
   imports: [
+    routing,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [
     {
