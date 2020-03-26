@@ -7,12 +7,14 @@ import { MouseEventDisplayComponent } from './mouse-event-display/mouse-event-di
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AuctionDataService} from './shared/auction-data.service';
+import { AuctionListDetailComponent } from './auction-list-detail/auction-list-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuctionListComponent,
-    MouseEventDisplayComponent
+    MouseEventDisplayComponent,
+    AuctionListDetailComponent
   ],
   imports: [
     BrowserModule,
