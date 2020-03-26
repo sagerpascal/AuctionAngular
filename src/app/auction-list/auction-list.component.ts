@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-auction-list',
@@ -7,6 +7,12 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class AuctionListComponent implements OnInit {
   @Input() headerTitle: string;
+
+  @Output() titleClicked = new EventEmitter<string>();
+
+  onTitleClicked(event: MouseEvent): void {
+    this.titleClicked.emit('Title clicked');
+  }
 
   constructor() {
   }
