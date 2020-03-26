@@ -13,10 +13,10 @@ import {HelperService} from '../shared/helper.service';
 })
 export class AuctionDetailComponent implements OnInit, OnDestroy {
 
-  private auction: Auction;
+  auction: Auction;
   private routeSubscription: Subscription;
   private subscription: Subscription;
-  private isFocusBid = false;
+  isFocusBid = false;
 
   constructor(private auctionDataService: AuctionDataService,
               private route: ActivatedRoute,
@@ -90,7 +90,7 @@ export class AuctionDetailComponent implements OnInit, OnDestroy {
     }
 
     const timeLeft: string = this.helperService.computeTimeLeft(this.auction.endDateTime);
-    if (timeLeft == '0') {
+    if (timeLeft === '0') {
       return 'Auction has ended';
     }
     return timeLeft;
