@@ -1,13 +1,13 @@
 .highlight {
-  background-color: Lavender
+  background-color: Lavender;
 }
 
 .container:hover {
-  background:#F3F3F3;
+  background: #F3F3F3;
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
   cursor: pointer;
   cursor: hand;
 }
 
-
+/*# sourceMappingURL=auction-list.component.css.map */

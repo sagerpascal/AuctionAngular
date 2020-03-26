@@ -11,6 +11,7 @@ import {AuctionListDetailComponent} from './auction-list-detail/auction-list-det
 import {AngularDateHttpInterceptor} from './shared/angular-date-http-interceptor.component';
 import {routing} from './app.routing';
 import {RouterModule} from '@angular/router';
+import { AuctionDetailComponent } from './auction-detail/auction-detail.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {RouterModule} from '@angular/router';
     AppComponent,
     AuctionListComponent,
     MouseEventDisplayComponent,
-    AuctionListDetailComponent
+    AuctionListDetailComponent,
+    AuctionDetailComponent
   ],
   imports: [
     routing,

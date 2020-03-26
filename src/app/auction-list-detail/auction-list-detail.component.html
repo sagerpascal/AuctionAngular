@@ -1,5 +1,4 @@
-<div class="container top">
-
+<div class="container top" (click)="onContainerClick()" >
   <div class="row ">
     <div class="col" align="center">
       <img class="auction-image" src="assets/{{auction.auctionItem.picture}}"/>
@@ -20,15 +19,11 @@
           <b class="text-fixed-price">{{getCurrencyString() + " " + auction.fixedPrice.toFixed(2)}}</b>
         </p>
       </span>
-
     </div>
-
   </div>
   <div class="row ">
     <div class="col">
       <p class="text-date"><i class="fa fa-calendar"></i> {{" " + getLocalDate(auction.endDateTime)}}</p>
-
     </div>
-
   </div>
 </div>
