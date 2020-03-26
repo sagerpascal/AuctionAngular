@@ -1,13 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { AuctionListComponent } from './auction-list/auction-list.component';
-import { MouseEventDisplayComponent } from './mouse-event-display/mouse-event-display.component';
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {AppComponent} from './app.component';
+import {AuctionListComponent} from './auction-list/auction-list.component';
+import {MouseEventDisplayComponent} from './mouse-event-display/mouse-event-display.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuctionDataService} from './shared/auction-data.service';
-import { AuctionListDetailComponent } from './auction-list-detail/auction-list-detail.component';
+import {AuctionListDetailComponent} from './auction-list-detail/auction-list-detail.component';
+import {AngularDateHttpInterceptor} from './shared/angular-date-http-interceptor.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +18,15 @@ import { AuctionListDetailComponent } from './auction-list-detail/auction-list-d
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpClientModule
   ],
-  providers: [AuctionDataService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AngularDateHttpInterceptor,
+      multi: true
+    }, AuctionDataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
