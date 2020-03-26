@@ -144,12 +144,18 @@
   <div class="spacer"></div>
 </div>
 
+<button class="btn btn-primary">Test Button</button>
+
 <div class="content" role="main">
 
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
-    <span>{{ title }} app works!</span>
+    <span>
+      {{ title }} app works!
+      <i class="fa fa-check"></i>
+    </span>
   </div>
   <app-auction-list (titleClicked)="onAuctionListTitleClicked($event)"  headerTitle="this is an auction list (static)"></app-auction-list>
+  <button class="btn btn-primary">Test Button</button>
 </div>
 

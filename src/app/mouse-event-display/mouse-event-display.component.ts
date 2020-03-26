@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-mouse-event-display',
   templateUrl: './mouse-event-display.component.html',
-  styleUrls: ['./mouse-event-display.component.css']
+  styleUrls: ['./mouse-event-display.component.scss']
 })
 export class MouseEventDisplayComponent implements OnInit {
 
