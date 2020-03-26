@@ -13,6 +13,8 @@ import {routing} from './app.routing';
 import {RouterModule} from '@angular/router';
 import { AuctionDetailComponent } from './auction-detail/auction-detail.component';
 import {HelperService} from './shared/helper.service';
+import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import {HelperService} from './shared/helper.service';
     AuctionListComponent,
     MouseEventDisplayComponent,
     AuctionListDetailComponent,
-    AuctionDetailComponent
+    AuctionDetailComponent,
+    HomeComponent,
+    NavBarComponent
   ],
   imports: [
     routing,
