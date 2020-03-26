@@ -12,6 +12,7 @@ import {AngularDateHttpInterceptor} from './shared/angular-date-http-interceptor
 import {routing} from './app.routing';
 import {RouterModule} from '@angular/router';
 import { AuctionDetailComponent } from './auction-detail/auction-detail.component';
+import {HelperService} from './shared/helper.service';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AuctionDetailComponent } from './auction-detail/auction-detail.componen
       provide: HTTP_INTERCEPTORS,
       useClass: AngularDateHttpInterceptor,
       multi: true
-    }, AuctionDataService],
+    }, AuctionDataService, HelperService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,4 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../node_modules/font-awesome/scss/font-awesome';
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 80% $font-stack;
+  color: $primary-color;
+}
+
+h4, .h4 {
+  font-size: 0.8 * $h4-font-size;
+  color: $primary-color;
+}

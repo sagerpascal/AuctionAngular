@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* You can add global styles to this file, and also import other style files */
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -12915,6 +12914,16 @@ h3 {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+body {
+  font: 80% Helvetica, sans-serif;
+  color: #333;
+}
+
+h4, .h4 {
+  font-size: 1.2rem;
+  color: #333;
 }
 
 /*# sourceMappingURL=styles.css.map */
