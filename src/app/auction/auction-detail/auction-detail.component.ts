@@ -3,8 +3,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {AuctionDataService} from '../shared/auction-data.service';
 import {Subscription} from 'rxjs';
 import {Auction} from '../shared/auction';
-import {CURRENCY_STRING} from '../../app.constants';
-import {HelperService} from '../shared/helper.service';
+import {HelperService} from '../../shared/helper.service';
+import {CURRENCY_STRING} from '../../../app.constants';
+
 
 @Component({
   selector: 'app-auction-detail',
