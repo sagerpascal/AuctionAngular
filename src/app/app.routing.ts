@@ -1,5 +1,5 @@
-import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
   {
@@ -7,11 +7,12 @@ export const routes: Routes = [
     component: HomeComponent
   }, {
     path: 'auctions',
-    loadChildren: './auction/auction.module#AuctionModule'
+    loadChildren : () => import('./auction/auction.module').then(m => m.AuctionModule),
   }, {
     path: '',
     pathMatch: 'full',
     redirectTo: '/home'
   }
 ];
+
 export const routing = RouterModule.forRoot(routes);
